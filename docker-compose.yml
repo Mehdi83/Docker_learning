@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  nginx:
+    build: .
+    image: nginx:v1
+    container_name: my-nginx
+    ports:
+      - 8011:80
+    volumes:
+      - ~/ytb/html/:/usr/share/nginx/html:ro
+    working_dir: /usr/share/nginx/html
+
+
+  php:
+    image: php:fpm-alpine
+    container_name: my-php
+    volumes:
+      - ~/ytb/html/:/usr/share/nginx/html:ro
+
+networks:
+  default:
+    name: "my-net"
