@@ -1,0 +1,18 @@
+http://localhost:8000/
+
+docker image prune : remove all <none> images
+ 
+Arch:
+ /usr/share/nginx/html
+
+Ubuntu:
+/var/www/html
+
+
+nginx conf path:
+Archlinux:
+ /etc/nginx/conf.d/ 
+ 
+ubuntu:
+ /usr/local/nginx/conf/nginx.conf
+  
